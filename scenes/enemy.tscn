@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://ficlitayrpow"]
+[gd_scene load_steps=11 format=3 uid="uid://ficlitayrpow"]
 
+[ext_resource type="Script" uid="uid://cmy4ld0qu6ked" path="res://scripts/enemy.gd" id="1_md484"]
 [ext_resource type="Texture2D" uid="uid://by175dosyk6d" path="res://assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/02-Run/Run 01.png" id="1_nenq2"]
 [ext_resource type="Texture2D" uid="uid://dh4ngtbt12qvw" path="res://assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/02-Run/Run 02.png" id="2_md484"]
 [ext_resource type="Texture2D" uid="uid://c8mbwyq34nrqd" path="res://assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/02-Run/Run 03.png" id="3_ipns3"]
@@ -34,10 +35,11 @@ animations = [{
 "speed": 7.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_g0wcc"]
-radius = 17.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_md484"]
+size = Vector2(33, 20)
 
 [node name="Enemy" type="Node2D"]
+script = ExtResource("1_md484")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -10)
@@ -50,4 +52,11 @@ frame_progress = 0.009718842
 position = Vector2(0, -10)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-shape = SubResource("CircleShape2D_g0wcc")
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_md484")
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+target_position = Vector2(23, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-23, 0)
