@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://j7av11a2ga4c"]
+[gd_scene load_steps=13 format=3 uid="uid://j7av11a2ga4c"]
 
 [ext_resource type="PackedScene" uid="uid://lbiac4om13iq" path="res://scenes/player.tscn" id="1_2q6dc"]
 [ext_resource type="Texture2D" uid="uid://dy87tpqtkh0qw" path="res://assets/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="2_w7c3h"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://h78hvat2sosk" path="res://scenes/spikes.tscn" id="7_klq6b"]
 [ext_resource type="PackedScene" uid="uid://bx804bgvydh7k" path="res://scenes/platform_small_anim.tscn" id="8_8c41q"]
 [ext_resource type="PackedScene" uid="uid://ficlitayrpow" path="res://scenes/enemy.tscn" id="8_b121j"]
+[ext_resource type="PackedScene" uid="uid://c05l3g8ndui0b" path="res://scenes/ui.tscn" id="9_8c41q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w8frs"]
 texture = ExtResource("2_w7c3h")
@@ -165,3 +166,5 @@ position = Vector2(-80, 230)
 
 [node name="Platform_small_anim2" parent="." instance=ExtResource("8_8c41q")]
 position = Vector2(176, 230)
+
+[node name="UI" parent="." instance=ExtResource("9_8c41q")]
